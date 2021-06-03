@@ -92,7 +92,7 @@ public final class Browser {
         timeoutForCondition = props.getProperty(DEFAULT_CONDITION_TIMEOUT);
 
         if (Strings.isNullOrEmpty(props.getProperty(BROWSER_PROP))) {
-            currentBrowser = Browsers.valueOf(props.getProperty(BROWSER_PROP, BROWSER_DEFAULT).toUpperCase());
+            currentBrowser = Browsers.valueOf(System.getProperty(BROWSER_PROP, BROWSER_DEFAULT).toUpperCase());
         } else {
             currentBrowser = Browsers.valueOf(props.getProperty(BROWSER_PROP).toUpperCase());
         }
